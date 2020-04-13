@@ -1,5 +1,5 @@
 reset
-set term postscript enhanced color size 22cm, 12cm font 10
+set term postscript enhanced color size 25cm, 6cm font 10
 set style data lines                                                    
 
 
@@ -11,24 +11,24 @@ set output "| ps2pdf - Memoryoutput.pdf"
 #-------------------------------
 
 #set size 0.5, 0.5
-set xrange [0:761]
+set xrange [0:750]
 set yrange [0:8000]
 
-set title font ",16" 
-set title "Memory Usage of Jetson TX2" offset 0,1
-set xlabel "Time index (s)" font ",16"  offset 0,-1
-set ylabel "Memory (MB)" font ",16" offset -3
+set title font ",12" 
+#set title "Memory Usage of Raspberry Pi 4" offset 0,1
+set xlabel "Time index (s)" font ",12"  offset 0,0
+set ylabel "Memory (MB)" font ",12" offset -3
 
 
 set grid y lw 2
-set xtics nomirror font ",16"  
-set xtic ("0" 0, "76" 76, "152" 152, "228" 228, "304" 304,"380"380,"456"456, "532"532, "608"608, "684"684, "760"760) font ",16" 
+set xtics nomirror font ",12"  
+set xtic ("0" 0, "150" 150, "300" 300, "450" 450, "600" 600, "750" 750) font ",12" 
 
 
-set ytics nomirror font ",16" 
-#set ytic("12" 100,"13" 400)  font ",16" 
+set ytics nomirror font ",12" 
+#set ytic("12" 100,"13" 400)  font ",12" 
 
-set key vertical right center outside font ",16"
+set key vertical right center outside font ",12"
 set key spacing 1
 set key samplen 2
 set key width 2
